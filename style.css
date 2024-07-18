@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+body{
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+*{
+    box-sizing: border-box;
+}
+
+nav ul{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 50px;
+    justify-content: center;
+    justify-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li{
+    background-color: #000;
+    width: 90%;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+nav ul li a{
+    text-decoration:none;
+    color: #ffffff;
+}
+
+nav ul li:hover{
+    background-color: red
+}
+.wrapper{
+    display: grid;
+    grid-template-rows: 150px repeat(3,auto);
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+}
+
+.wrapper>*{
+    border: 1px solid black;
+}   
+
+.wrapper>header{
+    text-align: center;
+    background-color: #111;
+    grid-column: 1/3;
+    padding: 10px;
+}
+
+.wrapper>header>div:first-child{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 500;
+    font-size: 3em;
+    padding-top: 20px;
+    color: red;
+}
+
+.wrapper>header>div:last-child{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.5em;
+    color: #bbb;
+
+}
+.wrapper>nav{
+    background-color: #111;
+    grid-column: 1/3;
+}
+
+
+.wrapper>article{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: justify;
+    padding: 10px;
+    background-color: #ccc;
+    font-size: 1.2em;
+}
+
+.wrapper>article img{
+    float: right;
+    border: 5px solid white;
+    margin: 5px;
+}
+
+wrapper>article img:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.wrapper>aside{
+    background-color: #000;
+    color: #ccc;
+}
+
+
+.wrapper>aside>div{
+    margin:10px 0;
+    border-bottom: red 2px solid;
+    padding: 5px 3px;
+}
+
+.wrapper>aside>div::first-letter{
+    color: red;
+    font-size: 1.4em;
+}
+
+.wrapper>footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/3;
+    background-color: #000;
+    color: white;
+}
+
+.wrapper>footer>div{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+}
+.wrapper>footer>div:last-child{
+    background-color: #333;
+ 
+}
+
+@media only screen and (max-width:640px){
+    .wrapper{
+        grid-template-rows: repeat(4,auto);
+        grid gap: 0;
+    }
+    .wrapper>article img{
+        float: none;
+        display: block;
+        width: 100%;
+        border: 0px;
+        margin: 0px;
+    }
+    .wrapper>aside, .wrapper>article{
+        font-size: 0.9em;
+        grid-column: 1/3;
+    }
+    .wrapper>footer{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
